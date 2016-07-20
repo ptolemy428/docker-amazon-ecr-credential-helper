@@ -22,4 +22,4 @@ RUN apk add --no-cache ca-certificates \
       && rm -rf /go/pkg /go/src
 
 ENTRYPOINT ["/bin/sh"]
-#CMD ["-c", "echo $REGISTRY | /go/bin/docker-credential-ecr-login $METHOD"]
+CMD ["-c", "echo $REGISTRY | /go/bin/docker-credential-ecr-login $METHOD"]
